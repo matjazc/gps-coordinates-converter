@@ -9,7 +9,7 @@ export default function matchInputWithMask(userInput) {
     return {
       type: "dd",
       latitude: `${matchDD[1]}.${matchDD[3]}`,
-      longitude: `${matchDD[4]}.${matchDD[6]}`,
+      longitude: `${matchDD[4]}.${matchDD[6]}`
     };
   }
 
@@ -20,14 +20,14 @@ export default function matchInputWithMask(userInput) {
         hemisphere: matchDMS[1],
         degrees: matchDMS[2],
         minutes: matchDMS[4],
-        seconds: `${matchDMS[6]}.${matchDMS[8]}`,
+        seconds: `${matchDMS[6]}.${matchDMS[8]}`
       },
       longitude: {
         hemisphere: matchDMS[9],
         degrees: matchDMS[10],
         minutes: matchDMS[12],
-        seconds: `${matchDMS[14]}.${matchDMS[16]}`,
-      },
+        seconds: `${matchDMS[14]}.${matchDMS[16]}`
+      }
     };
   }
 
@@ -37,13 +37,13 @@ export default function matchInputWithMask(userInput) {
       latitude: {
         hemisphere: matchDM[1],
         degrees: matchDM[2],
-        minutes: `${matchDM[4]}.${matchDM[6]}`,
+        minutes: `${matchDM[4]}.${matchDM[6]}`
       },
       longitude: {
         hemisphere: matchDM[7],
         degrees: matchDM[8],
-        minutes: `${matchDM[10]}.${matchDM[12]}`,
-      },
+        minutes: `${matchDM[10]}.${matchDM[12]}`
+      }
     };
   }
   throw new Error("Something went wrong! Try different coordinates.");
