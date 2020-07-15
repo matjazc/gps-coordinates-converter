@@ -4,7 +4,7 @@ const ONE_SECOND_IN_MINUTES = BigNumber(0.01666667);
 const calculateFromMinutesOnlyToMinutesAndSeconds = ({
   hemisphere,
   degrees,
-  minutes,
+  minutes
 }) => {
   const minutesInteger = BigNumber(parseInt(minutes));
 
@@ -15,7 +15,7 @@ const calculateFromMinutesOnlyToMinutesAndSeconds = ({
     seconds: BigNumber(minutes)
       .minus(minutesInteger)
       .dividedBy(ONE_SECOND_IN_MINUTES)
-      .toFixed(3),
+      .toFixed(3)
   };
 };
 
@@ -23,6 +23,6 @@ export default function dmToDms({ latitude, longitude }) {
   return {
     type: "dms",
     latitude: calculateFromMinutesOnlyToMinutesAndSeconds(latitude),
-    longitude: calculateFromMinutesOnlyToMinutesAndSeconds(longitude),
+    longitude: calculateFromMinutesOnlyToMinutesAndSeconds(longitude)
   };
 }

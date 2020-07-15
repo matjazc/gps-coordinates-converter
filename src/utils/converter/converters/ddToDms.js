@@ -1,6 +1,6 @@
 import BigNumber from "bignumber.js";
 
-const calculateToSeconds = (location) => {
+const calculateToSeconds = location => {
   const absoluteDegrees = BigNumber(location).abs();
   const degrees = BigNumber(parseInt(absoluteDegrees));
   const minutes = BigNumber(
@@ -15,7 +15,7 @@ const calculateToSeconds = (location) => {
   return {
     degrees: degrees.toString(),
     minutes: minutes.toString(),
-    seconds,
+    seconds
   };
 };
 
@@ -23,10 +23,10 @@ export default function ddToDms({ latitude, longitude }) {
   return {
     type: "dms",
     latitude: Object.assign({}, calculateToSeconds(latitude), {
-      hemisphere: latitude < 0 ? "S" : "N",
+      hemisphere: latitude < 0 ? "S" : "N"
     }),
     longitude: Object.assign({}, calculateToSeconds(longitude), {
-      hemisphere: longitude < 0 ? "W" : "E",
-    }),
+      hemisphere: longitude < 0 ? "W" : "E"
+    })
   };
 }

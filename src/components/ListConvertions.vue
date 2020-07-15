@@ -46,6 +46,6 @@
 <script>
 export default {
   name: "ListConvertions",
-  props: ["convertions"],
+  props: ["convertions"]
 };
 </script>

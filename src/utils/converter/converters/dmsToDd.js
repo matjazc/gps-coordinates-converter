@@ -4,7 +4,7 @@ const signs = {
   N: 1,
   S: -1,
   E: 1,
-  W: -1,
+  W: -1
 };
 
 const calculateToDegrees = (
@@ -26,6 +26,6 @@ export default function dmsToDd({ latitude, longitude }) {
   return {
     type: "dd",
     latitude: calculateToDegrees(latitude, signs),
-    longitude: calculateToDegrees(longitude, signs),
+    longitude: calculateToDegrees(longitude, signs)
   };
 }
