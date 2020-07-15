@@ -8,7 +8,7 @@ const calculateToMin = ({ hemisphere, degrees, minutes, seconds }) => {
     minutes: BigNumber(seconds)
       .multipliedBy(ONE_SECOND_IN_MINUTES)
       .plus(BigNumber(minutes))
-      .toFixed(3),
+      .toFixed(3)
   };
 };
 
@@ -16,6 +16,6 @@ export default function dmsToDm({ latitude, longitude }) {
   return {
     type: "dm",
     latitude: calculateToMin(latitude),
-    longitude: calculateToMin(longitude),
+    longitude: calculateToMin(longitude)
   };
 }

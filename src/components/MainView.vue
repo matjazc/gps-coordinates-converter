@@ -40,7 +40,7 @@ import config from "../utils/config";
 export default {
   name: "MainView",
   components: {
-    ListConvertions,
+    ListConvertions
   },
   data() {
     return {
@@ -48,23 +48,23 @@ export default {
       convertions: [],
       showResults: false,
       valid: false,
-      validationRules: [],
+      validationRules: []
     };
   },
   watch: {
     userInput() {
       this.validationRules = [];
-    },
+    }
   },
   methods: {
     validateAndConvert() {
       this.validationRules = [
-        (v) => !!v || "Coordinates are required",
-        (v) =>
+        v => !!v || "Coordinates are required",
+        v =>
           config.regex.dd.test(v) ||
           config.regex.dm.test(v) ||
           config.regex.dms.test(v) ||
-          "Unsupported format. Click here for instructions. ",
+          "Unsupported format. Click here for instructions. "
       ];
       let _this = this;
       setTimeout(function() {
@@ -83,7 +83,7 @@ export default {
         }
         _this.showResults = false;
       });
-    },
-  },
+    }
+  }
 };
 </script>

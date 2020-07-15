@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-escape */
 
-//REGEX descrition:
+//REGEX description:
 
 //DD input must be in format: "12.1234, -45.6789"
 
@@ -28,21 +28,21 @@ const config = {
     dm: /^([N]|[S])([0-9]|[1-9][0-9]|1[1-7][0-9]|180)\b(\ )([0-9]|[1-5][0-9]|60)(\.)([0-9][0-9][0-9])\b, ([E]|[W])([0-9]|[1-9][0-9]|1[1-7][0-9]|180)\b(\ )([0-9]|[1-5][0-9]|60)(\.)([0-9][0-9][0-9])\b$/,
     dms: /^([N]|[S])([0-9]|[1-9][0-9]|1[1-7][0-9]|180)\b(\ )([0-9]|[1-5][0-9]|60)\b(\ )([0-9]|[1-5][0-9]|60)(\.)([0-9])\b, ([E]|[W])([0-9]|[1-9][0-9]|1[1-7][0-9]|180)\b(\ )([0-9]|[1-5][0-9]|60)\b(\ )([0-9]|[1-5][0-9]|60)(\.)([0-9])\b$/
   },
-  selectConversionLogic:{
+  selectConversionLogic: {
     dms: {
       dm: dmsToDm,
-      dd: dmsToDd,
+      dd: dmsToDd
     },
 
     dd: {
       dms: ddToDms,
-      dm: ddToDm,
+      dm: ddToDm
     },
 
     dm: {
       dms: dmToDms,
-      dd: dmToDd,
-    },
+      dd: dmToDd
+    }
   }
 };
 
