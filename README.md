@@ -1,4 +1,11 @@
-# gps-coordinates-converter
+# GPS coordinates converter
+
+Simple converter support conversion between those formats:
+- Decimal Degrees (DD.dddddd°)
+- Degrees Minutes (H DD° MM.mmm´) 
+- Degrees Minutes Seconds (H DD° MM´ SS.sss´´)
+
+**Conversion logic may have hidden bugs, use at your own risk!**
 
 ## Project setup
 ```
@@ -29,6 +36,3 @@ npm run test:e2e
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
